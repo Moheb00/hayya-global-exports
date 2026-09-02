@@ -155,6 +155,7 @@ export const copy = {
       close: "Close menu",
     },
     hero: {
+      eyebrow: "Egyptian Agricultural Export",
       title: "Fresh From Egypt. Trusted Around the World.",
       sub: "HAYYA connects premium Egyptian agricultural products with international markets through reliable sourcing, quality-focused operations, and professional export solutions.",
       primary: "Request a Quote",
@@ -281,6 +282,7 @@ export const copy = {
       close: "إغلاق القائمة",
     },
     hero: {
+      eyebrow: "التصدير الزراعي المصري",
       title: "طازج من مصر، وموثوق حول العالم",
       sub: "تربط هيا المنتجات الزراعية المصرية المتميزة بالأسواق الدولية من خلال توريد موثوق، وعمليات تركز على الجودة، وحلول تصدير احترافية.",
       primary: "اطلب عرض سعر",

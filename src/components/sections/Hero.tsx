@@ -24,7 +24,7 @@ export function Hero() {
 
       <div className="container-hayya pt-36 pb-16 md:pb-24">
         <div className="max-w-3xl">
-          <p className="eyebrow">{t.products.label === "Our Products" ? "Egyptian Agricultural Export" : "التصدير الزراعي المصري"}</p>
+          <p className="eyebrow">{t.hero.eyebrow}</p>
           <h1 className="mt-5 text-[2.5rem] leading-[1.06] text-on-navy sm:text-6xl lg:text-7xl">
             {t.hero.title}
           </h1>

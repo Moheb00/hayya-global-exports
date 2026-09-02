@@ -55,7 +55,6 @@ function HomePage() {
     <LanguageProvider>
       <Header />
       <main>
-        <h1 className="sr-only">HAYYA — Egyptian Agricultural Products Export</h1>
         <Hero />
         <TrustBar />
         <About />
