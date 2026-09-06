@@ -6,12 +6,12 @@
  * Edit values here; components read from this file only.
  */
 
-import fruits from "@/assets/prod-fruits.jpg";
-import vegetables from "@/assets/prod-vegetables.jpg";
-import citrus from "@/assets/prod-citrus.jpg";
-import potatoes from "@/assets/prod-potatoes.jpg";
-import onions from "@/assets/prod-onions.jpg";
-import seasonal from "@/assets/prod-seasonal.jpg";
+import mangoes from "@/assets/prod-mangoes.jpg.asset.json";
+import tomatoes from "@/assets/prod-tomatoes.jpg.asset.json";
+import bellPeppers from "@/assets/prod-bell-peppers.jpg.asset.json";
+import greenGrapes from "@/assets/prod-grapes-green.jpg.asset.json";
+import pomegranates from "@/assets/prod-pomegranates.jpg.asset.json";
+import mixedGrapes from "@/assets/prod-grapes-mixed.jpg.asset.json";
 
 export type Lang = "en" | "ar";
 
@@ -20,14 +20,8 @@ export type Lang = "en" | "ar";
 /* ------------------------------------------------------------------ */
 export const company = {
   name: "HAYYA",
-  /**
-   * NOTE: supplied exactly as provided by the client. It appears to be
-   * missing an "@" symbol and has NOT been guessed or corrected.
-   * Replace the value below once the correct address is confirmed,
-   * and set `emailIsValid` to true to activate the mailto: link.
-   */
-  email: "rezq.hayya_egypt.com",
-  emailIsValid: false,
+  email: "INFO@hayya-eg.com",
+  emailIsValid: true,
   phone: "+20 10 60010040",
   phoneHref: "+201060010040",
   location: { en: "El Shorouk City, Egypt", ar: "مدينة الشروق، مصر" },
@@ -44,75 +38,75 @@ export const company = {
 /* ------------------------------------------------------------------ */
 export const products = [
   {
-    id: "fresh-fruits",
-    image: fruits,
+    id: "mangoes",
+    image: mangoes.url,
     en: {
-      name: "Fresh Fruits",
-      desc: "A selection of Egyptian fruits sourced for commercial buyers, subject to season and availability.",
+      name: "Fresh Mangoes",
+      desc: "Egyptian mangoes selected and packed for export, with attention to ripeness, size, and condition.",
     },
     ar: {
-      name: "فواكه طازجة",
-      desc: "تشكيلة من الفواكه المصرية يتم توريدها للمشترين التجاريين وفقًا للموسم والتوافر.",
+      name: "مانجو طازج",
+      desc: "مانجو مصري يتم اختياره وتعبئته للتصدير مع الاهتمام بنضجه وحجمه وحالته.",
     },
   },
   {
-    id: "fresh-vegetables",
-    image: vegetables,
+    id: "tomatoes",
+    image: tomatoes.url,
     en: {
-      name: "Fresh Vegetables",
-      desc: "Field-sourced vegetables handled with attention to condition, grading and consistency.",
+      name: "Tomatoes",
+      desc: "Fresh Egyptian tomatoes sourced for commercial buyers and prepared to agreed specifications.",
     },
     ar: {
-      name: "خضروات طازجة",
-      desc: "خضروات يتم توريدها من الحقول مع الاهتمام بالحالة والفرز والاتساق.",
+      name: "طماطم",
+      desc: "طماطم مصرية طازجة يتم توريدها للمشترين التجاريين وتجهيزها وفق المواصفات المتفق عليها.",
     },
   },
   {
-    id: "citrus",
-    image: citrus,
+    id: "bell-peppers",
+    image: bellPeppers.url,
     en: {
-      name: "Citrus",
-      desc: "Egyptian citrus varieties prepared according to buyer size, packing and grading requirements.",
+      name: "Bell Peppers",
+      desc: "Colorful bell peppers packed for export, graded for size, color, and freshness.",
     },
     ar: {
-      name: "الموالح",
-      desc: "أصناف الموالح المصرية يتم تجهيزها وفق متطلبات المشتري من الأحجام والتعبئة والفرز.",
+      name: "فلفل حلو",
+      desc: "فلفل حلو ملون يتم تعبئته للتصدير وفرزه حسب الحجم واللون والطزاجة.",
     },
   },
   {
-    id: "potatoes",
-    image: potatoes,
+    id: "green-grapes",
+    image: greenGrapes.url,
     en: {
-      name: "Potatoes",
-      desc: "Sourced with attention to size grading, condition and handling for commercial volumes.",
+      name: "Green Grapes",
+      desc: "Egyptian green table grapes handled with care for bunches, berry size, and export quality.",
     },
     ar: {
-      name: "البطاطس",
-      desc: "يتم توريدها مع الاهتمام بتدريج الأحجام والحالة والتداول للكميات التجارية.",
+      name: "عنب أخضر",
+      desc: "عنب مصري أخضر للأكل يتم تداوله بعناية للحفاظ على العناقيد وحجم الحبة وجودة التصدير.",
     },
   },
   {
-    id: "onions",
-    image: onions,
+    id: "pomegranates",
+    image: pomegranates.url,
     en: {
-      name: "Onions",
-      desc: "Available in commercial packing formats, prepared to agreed buyer specifications.",
+      name: "Pomegranates",
+      desc: "Premium Egyptian pomegranates selected for skin quality, size, and shelf-ready presentation.",
     },
     ar: {
-      name: "البصل",
-      desc: "متاح بصيغ تعبئة تجارية ويتم تجهيزه وفق المواصفات المتفق عليها مع المشتري.",
+      name: "رمان",
+      desc: "رمان مصري ممتاز يتم اختياره حسب جودة القشرة والحجم ومظهره الجاهز للعرض.",
     },
   },
   {
-    id: "seasonal",
-    image: seasonal,
+    id: "table-grapes",
+    image: mixedGrapes.url,
     en: {
-      name: "Seasonal Produce",
-      desc: "Additional Egyptian produce lines can be discussed based on season and buyer requirements.",
+      name: "Table Grapes",
+      desc: "A range of Egyptian table grape varieties prepared for international markets and buyer programs.",
     },
     ar: {
-      name: "محاصيل موسمية",
-      desc: "يمكن مناقشة خطوط إنتاج مصرية إضافية حسب الموسم ومتطلبات المشتري.",
+      name: "عنب للأكل",
+      desc: "مجموعة من أصناف العنب المصري للأكل يتم تجهيزها للأسواق الدولية وبرامج المشترين.",
     },
   },
 ];
