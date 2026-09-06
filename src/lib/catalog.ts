@@ -102,7 +102,7 @@ export async function uploadProductImage(file: File): Promise<string> {
   const path = `${crypto.randomUUID()}.${ext}`;
   const { error } = await supabase.storage
     .from(PRODUCT_BUCKET)
-    .upload(path, file, { contentType: file.type || undefined, upsert: false });
+    .upload(path, file, { contentType: file.type || "application/octet-stream", upsert: false });
   if (error) throw error;
   return path;
 }
