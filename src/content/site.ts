@@ -20,14 +20,8 @@ export type Lang = "en" | "ar";
 /* ------------------------------------------------------------------ */
 export const company = {
   name: "HAYYA",
-  /**
-   * NOTE: supplied exactly as provided by the client. It appears to be
-   * missing an "@" symbol and has NOT been guessed or corrected.
-   * Replace the value below once the correct address is confirmed,
-   * and set `emailIsValid` to true to activate the mailto: link.
-   */
-  email: "rezq.hayya_egypt.com",
-  emailIsValid: false,
+  email: "INFO@hayya-eg.com",
+  emailIsValid: true,
   phone: "+20 10 60010040",
   phoneHref: "+201060010040",
   location: { en: "El Shorouk City, Egypt", ar: "مدينة الشروق، مصر" },
