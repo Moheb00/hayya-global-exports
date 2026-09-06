@@ -6,12 +6,12 @@
  * Edit values here; components read from this file only.
  */
 
-import fruits from "@/assets/prod-fruits.jpg";
-import vegetables from "@/assets/prod-vegetables.jpg";
-import citrus from "@/assets/prod-citrus.jpg";
-import potatoes from "@/assets/prod-potatoes.jpg";
-import onions from "@/assets/prod-onions.jpg";
-import seasonal from "@/assets/prod-seasonal.jpg";
+import mangoes from "@/assets/prod-mangoes.jpg.asset.json";
+import tomatoes from "@/assets/prod-tomatoes.jpg.asset.json";
+import bellPeppers from "@/assets/prod-bell-peppers.jpg.asset.json";
+import greenGrapes from "@/assets/prod-grapes-green.jpg.asset.json";
+import pomegranates from "@/assets/prod-pomegranates.jpg.asset.json";
+import mixedGrapes from "@/assets/prod-grapes-mixed.jpg.asset.json";
 
 export type Lang = "en" | "ar";
 
