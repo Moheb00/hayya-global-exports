@@ -53,7 +53,7 @@ export function GlobalMarkets() {
             {t.global.title}
           </h2>
           <p className="mt-6 text-base leading-relaxed text-on-navy-muted">{t.global.body}</p>
-          <BrandLink href="#contact" variant="gold" size="lg" className="mt-9">
+          <BrandLink href="/#contact" variant="gold" size="lg" className="mt-9">
             {t.global.cta}
           </BrandLink>
         </Reveal>

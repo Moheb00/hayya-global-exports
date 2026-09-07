@@ -1,16 +1,16 @@
 import logo from "@/assets/hayya-logo.png";
-import { company, products } from "@/content/site";
+import { catalogCopy, company, products } from "@/content/site";
 import { useLanguage } from "@/lib/language";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 const navKeys = ["home", "about", "products", "why", "partnerships", "contact"] as const;
 const navHrefs: Record<(typeof navKeys)[number], string> = {
-  home: "#home",
-  about: "#about",
-  products: "#products",
-  why: "#why",
-  partnerships: "#partnerships",
-  contact: "#contact",
+  home: "/#home",
+  about: "/#about",
+  products: "/products",
+  why: "/#why",
+  partnerships: "/#partnerships",
+  contact: "/#contact",
 };
 
 export function Footer() {
@@ -65,7 +65,7 @@ export function Footer() {
             {products.map((product) => (
               <li key={product.id}>
                 <a
-                  href="#products"
+                  href="/products"
                   className="text-sm text-on-navy-muted transition-colors hover:text-gold"
                 >
                   {product[lang].name}
@@ -85,14 +85,21 @@ export function Footer() {
                 {company.phone}
               </a>
             </li>
-            <li className="break-all">{company.email}</li>
+            <li className="break-all">
+              <a href={`mailto:${company.email}`} className="hover:text-gold">
+                {company.email}
+              </a>
+            </li>
             <li>{company.location[lang]}</li>
           </ul>
         </div>
       </div>
 
-      <div className="container-hayya mt-14 border-t border-on-navy/15 pt-6">
+      <div className="container-hayya mt-14 flex flex-wrap items-center justify-between gap-3 border-t border-on-navy/15 pt-6">
         <p className="text-xs text-on-navy/55">{t.footer.rights}</p>
+        <a href="/admin" className="text-xs text-on-navy/55 transition-colors hover:text-gold">
+          {catalogCopy[lang].manage}
+        </a>
       </div>
     </footer>
   );

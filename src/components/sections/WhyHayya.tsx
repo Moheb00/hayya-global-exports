@@ -1,4 +1,11 @@
-import { Handshake, BadgeCheck, MessagesSquare, Boxes, Wheat, Infinity as InfinityIcon } from "lucide-react";
+import {
+  Handshake,
+  BadgeCheck,
+  MessagesSquare,
+  Boxes,
+  Wheat,
+  Infinity as InfinityIcon,
+} from "lucide-react";
 import { useLanguage } from "@/lib/language";
 import { Reveal } from "@/components/Reveal";
 

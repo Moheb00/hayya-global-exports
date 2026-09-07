@@ -7,12 +7,12 @@ import { BrandLink } from "@/components/BrandButton";
 import { cn } from "@/lib/utils";
 
 const links = [
-  { href: "#home", key: "home" },
-  { href: "#about", key: "about" },
-  { href: "#products", key: "products" },
-  { href: "#why", key: "why" },
-  { href: "#partnerships", key: "partnerships" },
-  { href: "#contact", key: "contact" },
+  { href: "/#home", key: "home" },
+  { href: "/#about", key: "about" },
+  { href: "/products", key: "products" },
+  { href: "/#why", key: "why" },
+  { href: "/#partnerships", key: "partnerships" },
+  { href: "/#contact", key: "contact" },
 ] as const;
 
 export function Header() {
@@ -49,7 +49,7 @@ export function Header() {
           scrolled ? "h-16" : "h-20 md:h-24",
         )}
       >
-        <a href="#home" className="flex items-center" aria-label="HAYYA home">
+        <a href="/#home" className="flex items-center" aria-label="HAYYA home">
           <img
             src={logo}
             alt="HAYYA"
@@ -73,7 +73,7 @@ export function Header() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <LanguageSwitcher />
-          <BrandLink href="#contact" variant="gold">
+          <BrandLink href="/#contact" variant="gold">
             {t.nav.quote}
           </BrandLink>
         </div>
@@ -121,7 +121,7 @@ export function Header() {
             </a>
           ))}
           <BrandLink
-            href="#contact"
+            href="/#contact"
             variant="gold"
             size="lg"
             className="mt-8 w-full"
