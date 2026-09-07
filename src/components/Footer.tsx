@@ -85,15 +85,23 @@ export function Footer() {
                 {company.phone}
               </a>
             </li>
-            <li className="break-all">{company.email}</li>
+            <li className="break-all">
+              <a href={`mailto:${company.email}`} className="hover:text-gold">
+                {company.email}
+              </a>
+            </li>
             <li>{company.location[lang]}</li>
           </ul>
         </div>
       </div>
 
-      <div className="container-hayya mt-14 border-t border-on-navy/15 pt-6">
+      <div className="container-hayya mt-14 flex flex-wrap items-center justify-between gap-3 border-t border-on-navy/15 pt-6">
         <p className="text-xs text-on-navy/55">{t.footer.rights}</p>
+        <a href="/admin" className="text-xs text-on-navy/55 transition-colors hover:text-gold">
+          {catalogCopy[lang].manage}
+        </a>
       </div>
+
     </footer>
   );
 }
