@@ -7,14 +7,7 @@ import { cn } from "@/lib/utils";
 import { brandButton } from "@/components/BrandButton";
 
 type FieldKey =
-  | "name"
-  | "companyName"
-  | "email"
-  | "country"
-  | "phone"
-  | "product"
-  | "quantity"
-  | "message";
+  "name" | "companyName" | "email" | "country" | "phone" | "product" | "quantity" | "message";
 
 const empty: Record<FieldKey, string> = {
   name: "",

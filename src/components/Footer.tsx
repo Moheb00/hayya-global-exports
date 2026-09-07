@@ -1,5 +1,5 @@
 import logo from "@/assets/hayya-logo.png";
-import { company, products } from "@/content/site";
+import { catalogCopy, company, products } from "@/content/site";
 import { useLanguage } from "@/lib/language";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
@@ -101,7 +101,6 @@ export function Footer() {
           {catalogCopy[lang].manage}
         </a>
       </div>
-
     </footer>
   );
 }

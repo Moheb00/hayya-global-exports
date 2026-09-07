@@ -199,7 +199,10 @@ function CatalogManager() {
   const { lang } = useLanguage();
   const a = catalogCopy[lang].admin;
   const queryClient = useQueryClient();
-  const { data, isLoading } = useQuery({ queryKey: ["products", "all"], queryFn: fetchAllProducts });
+  const { data, isLoading } = useQuery({
+    queryKey: ["products", "all"],
+    queryFn: fetchAllProducts,
+  });
   const [editing, setEditing] = useState<ProductWithImage | "new" | null>(null);
   const [status, setStatus] = useState<string | null>(null);
 
@@ -456,7 +459,11 @@ function ProductForm({
             className={cn(brandButton({ variant: "outline" }), "cursor-pointer")}
             htmlFor="photo-input"
           >
-            {uploading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Upload className="h-4 w-4" />}
+            {uploading ? (
+              <Loader2 className="h-4 w-4 animate-spin" />
+            ) : (
+              <Upload className="h-4 w-4" />
+            )}
             {uploading ? a.uploading : a.uploadPhoto}
           </label>
           <input
