@@ -20,15 +20,14 @@ export type Lang = "en" | "ar";
 /* ------------------------------------------------------------------ */
 export const company = {
   name: "HAYYA",
-  email: "INFO@hayya-eg.com",
+  email: "rezk@hayya-eg.com",
   emailIsValid: true,
   phone: "+20 10 60010040",
   phoneHref: "+201060010040",
   location: { en: "El Shorouk City, Egypt", ar: "مدينة الشروق، مصر" },
   /**
-   * Inquiry form destination. No email/backend service is connected yet,
-   * so the form validates and reports that submission is not yet enabled.
-   * Set `endpoint` to a URL (or wire a server function) to activate it.
+   * Inquiry form destination. When Lovable-managed email is enabled, the form
+   * sends a notification to the company email above.
    */
   formEndpoint: null as string | null,
 };
