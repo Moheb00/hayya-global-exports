@@ -5,12 +5,12 @@ import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 const navKeys = ["home", "about", "products", "why", "partnerships", "contact"] as const;
 const navHrefs: Record<(typeof navKeys)[number], string> = {
-  home: "#home",
-  about: "#about",
-  products: "#products",
-  why: "#why",
-  partnerships: "#partnerships",
-  contact: "#contact",
+  home: "/#home",
+  about: "/#about",
+  products: "/products",
+  why: "/#why",
+  partnerships: "/#partnerships",
+  contact: "/#contact",
 };
 
 export function Footer() {
@@ -65,7 +65,7 @@ export function Footer() {
             {products.map((product) => (
               <li key={product.id}>
                 <a
-                  href="#products"
+                  href="/products"
                   className="text-sm text-on-navy-muted transition-colors hover:text-gold"
                 >
                   {product[lang].name}

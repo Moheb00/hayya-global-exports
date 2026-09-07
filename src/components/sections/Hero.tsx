@@ -32,10 +32,10 @@ export function Hero() {
             {t.hero.sub}
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <BrandLink href="#contact" variant="gold" size="lg" className="w-full sm:w-auto">
+            <BrandLink href="/#contact" variant="gold" size="lg" className="w-full sm:w-auto">
               {t.hero.primary}
             </BrandLink>
-            <BrandLink href="#products" variant="ghostLight" size="lg" className="w-full sm:w-auto">
+            <BrandLink href="/products" variant="ghostLight" size="lg" className="w-full sm:w-auto">
               {t.hero.secondary}
             </BrandLink>
           </div>

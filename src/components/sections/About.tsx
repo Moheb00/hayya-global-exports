@@ -24,7 +24,7 @@ export function About() {
               </li>
             ))}
           </ul>
-          <BrandLink href="#contact" variant="outline" className="mt-9">
+          <BrandLink href="/#contact" variant="outline" className="mt-9">
             {t.about.cta}
             <ArrowRight className={dir === "rtl" ? "h-4 w-4 rotate-180" : "h-4 w-4"} />
           </BrandLink>

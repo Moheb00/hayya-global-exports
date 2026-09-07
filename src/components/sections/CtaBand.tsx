@@ -1,3 +1,4 @@
+import { company } from "@/content/site";
 import { useLanguage } from "@/lib/language";
 import { Reveal } from "@/components/Reveal";
 import { BrandLink } from "@/components/BrandButton";
@@ -20,10 +21,10 @@ export function CtaBand() {
             {t.cta.body}
           </p>
           <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
-            <BrandLink href="#contact" variant="solid" size="lg">
+            <BrandLink href="/#contact" variant="solid" size="lg">
               {t.cta.primary}
             </BrandLink>
-            <BrandLink href="#contact" variant="outline" size="lg">
+            <BrandLink href={`mailto:${company.email}`} variant="outline" size="lg">
               {t.cta.secondary}
             </BrandLink>
           </div>
