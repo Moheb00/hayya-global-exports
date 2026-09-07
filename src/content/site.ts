@@ -239,9 +239,9 @@ export const copy = {
         submit: "Send Inquiry",
         optional: "Optional",
         notice:
-          "Form delivery is not connected yet. Until it is, please reach us by phone.",
+          "Inquiries are sent by email to rezk@hayya-eg.com. Email delivery is being set up now, so send may be disabled briefly until the domain is verified.",
         success:
-          "Your inquiry was validated, but no email service is connected yet — please contact us by phone so nothing is missed.",
+          "Thank you — your inquiry has been sent. We will reply to rezk@hayya-eg.com or contact you directly.",
         errors: {
           name: "Please enter your full name.",
           company: "Please enter your company name.",
@@ -365,9 +365,10 @@ export const copy = {
         message: "الرسالة",
         submit: "إرسال الاستفسار",
         optional: "اختياري",
-        notice: "لم يتم ربط إرسال النموذج بخدمة بريد بعد. حتى ذلك الحين، يُرجى التواصل هاتفيًا.",
+        notice:
+          "يتم إرسال الاستفسارات بالبريد إلى rezk@hayya-eg.com. جارٍ إعداد خدمة البريد الآن، وقد يكون الإرسال متوقفًا مؤقتًا حتى يتم التحقق من النطاق.",
         success:
-          "تم التحقق من استفسارك، لكن لم يتم ربط خدمة بريد بعد — يُرجى التواصل معنا هاتفيًا حتى لا يفوتنا طلبك.",
+          "شكرًا لك — تم إرسال استفسارك. سنتواصل معك عبر rezk@hayya-eg.com أو نتصل بك مباشرة.",
         errors: {
           name: "يُرجى إدخال الاسم الكامل.",
           company: "يُرجى إدخال اسم الشركة.",
