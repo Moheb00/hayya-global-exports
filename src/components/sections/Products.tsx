@@ -1,10 +1,25 @@
-import { ArrowRight } from "lucide-react";
-import { products } from "@/content/site";
+import { useQuery } from "@tanstack/react-query";
+import { Link } from "@tanstack/react-router";
+import { catalogCopy } from "@/content/site";
 import { useLanguage } from "@/lib/language";
 import { Reveal } from "@/components/Reveal";
+import { ProductGrid } from "@/components/ProductGrid";
+import { brandButton } from "@/components/BrandButton";
+import { fetchPublishedProducts } from "@/lib/catalog";
+import { cn } from "@/lib/utils";
 
 export function Products() {
-  const { t, lang, dir } = useLanguage();
+  const { t, lang } = useLanguage();
+  const c = catalogCopy[lang];
+
+  const { data, isLoading, isError } = useQuery({
+    queryKey: ["products", "published"],
+    queryFn: fetchPublishedProducts,
+  });
+
+  const all = data ?? [];
+  const featured = all.filter((p) => p.is_featured);
+  const highlights = (featured.length > 0 ? featured : all).slice(0, 3);
 
   return (
     <section id="products" className="border-y border-border bg-secondary py-20 md:py-28 lg:py-32">
@@ -17,49 +32,20 @@ export function Products() {
           <p className="mt-5 text-base leading-relaxed text-muted-foreground">{t.products.sub}</p>
         </Reveal>
 
-        <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {products.map((product, i) => {
-            const local = product[lang];
-            return (
-              <Reveal
-                as="li"
-                key={product.id}
-                delay={(i % 3) * 90}
-                className="group border border-border bg-card transition-all duration-500 hover:-translate-y-1 hover:border-gold/50 hover:shadow-lift"
-              >
-                <div className="overflow-hidden">
-                  <img
-                    src={product.image}
-                    alt={local.name}
-                    width={1024}
-                    height={1024}
-                    loading="lazy"
-                    className="aspect-4/3 w-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl text-navy">{local.name}</h3>
-                  <p className="mt-2.5 min-h-16 text-sm leading-relaxed text-muted-foreground">
-                    {local.desc}
-                  </p>
-                  <a
-                    href="#contact"
-                    className="mt-5 inline-flex items-center gap-2 text-xs font-bold tracking-[0.14em] text-navy uppercase transition-colors hover:text-gold"
-                  >
-                    {t.products.cta}
-                    <ArrowRight
-                      className={
-                        dir === "rtl"
-                          ? "h-3.5 w-3.5 rotate-180 transition-transform group-hover:-translate-x-1"
-                          : "h-3.5 w-3.5 transition-transform group-hover:translate-x-1"
-                      }
-                    />
-                  </a>
-                </div>
-              </Reveal>
-            );
-          })}
-        </ul>
+        <div className="mt-14">
+          {isLoading && <p className="text-sm text-muted-foreground">{c.loading}</p>}
+          {isError && <p className="text-sm text-destructive">{c.error}</p>}
+          {!isLoading && !isError && highlights.length === 0 && (
+            <p className="text-sm text-muted-foreground">{c.empty}</p>
+          )}
+          {highlights.length > 0 && <ProductGrid products={highlights} />}
+        </div>
+
+        <div className="mt-12">
+          <Link to="/products" className={cn(brandButton({ variant: "solid", size: "lg" }))}>
+            {c.viewAll}
+          </Link>
+        </div>
       </div>
     </section>
   );
