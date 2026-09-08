@@ -158,7 +158,10 @@ export const copy = {
     trust: [
       { title: "Egyptian Origin", desc: "Premium agricultural products sourced from Egypt." },
       { title: "Quality Focus", desc: "Careful product selection and quality-focused handling." },
-      { title: "Reliable Supply", desc: "Built around consistent sourcing and professional operations." },
+      {
+        title: "Reliable Supply",
+        desc: "Built around consistent sourcing and professional operations.",
+      },
       { title: "B2B Export", desc: "Serving international buyers and commercial partners." },
     ],
     about: {
@@ -183,10 +186,26 @@ export const copy = {
       title: "From Source to Shipment",
       sub: "A straightforward, professional approach built around the requirements of commercial buyers.",
       steps: [
-        { n: "01", title: "Sourcing", desc: "Selecting agricultural products through reliable sourcing relationships." },
-        { n: "02", title: "Quality Selection", desc: "Focusing on product quality, freshness, and consistency." },
-        { n: "03", title: "Preparation", desc: "Professional preparation and handling according to buyer requirements." },
-        { n: "04", title: "Export", desc: "Supporting the process of delivering products to international buyers." },
+        {
+          n: "01",
+          title: "Sourcing",
+          desc: "Selecting agricultural products through reliable sourcing relationships.",
+        },
+        {
+          n: "02",
+          title: "Quality Selection",
+          desc: "Focusing on product quality, freshness, and consistency.",
+        },
+        {
+          n: "03",
+          title: "Preparation",
+          desc: "Professional preparation and handling according to buyer requirements.",
+        },
+        {
+          n: "04",
+          title: "Export",
+          desc: "Supporting the process of delivering products to international buyers.",
+        },
       ],
     },
     why: {
@@ -194,11 +213,23 @@ export const copy = {
       title: "Why Partner With HAYYA",
       items: [
         { title: "Reliable Sourcing", desc: "Strong agricultural sourcing relationships." },
-        { title: "Quality Focus", desc: "Attention to freshness, product condition, and consistency." },
-        { title: "Professional Communication", desc: "Clear communication with international buyers and partners." },
-        { title: "Flexible B2B Supply", desc: "Solutions designed around commercial buyer requirements." },
+        {
+          title: "Quality Focus",
+          desc: "Attention to freshness, product condition, and consistency.",
+        },
+        {
+          title: "Professional Communication",
+          desc: "Clear communication with international buyers and partners.",
+        },
+        {
+          title: "Flexible B2B Supply",
+          desc: "Solutions designed around commercial buyer requirements.",
+        },
         { title: "Egyptian Agricultural Origin", desc: "Access to products sourced from Egypt." },
-        { title: "Long-Term Partnerships", desc: "Focused on building sustainable business relationships." },
+        {
+          title: "Long-Term Partnerships",
+          desc: "Focused on building sustainable business relationships.",
+        },
       ],
     },
     partnerships: {
@@ -310,7 +341,11 @@ export const copy = {
       title: "من المصدر إلى الشحن",
       sub: "منهج واضح واحترافي مبني على متطلبات المشترين التجاريين.",
       steps: [
-        { n: "٠١", title: "التوريد", desc: "اختيار المنتجات الزراعية من خلال علاقات توريد موثوقة." },
+        {
+          n: "٠١",
+          title: "التوريد",
+          desc: "اختيار المنتجات الزراعية من خلال علاقات توريد موثوقة.",
+        },
         { n: "٠٢", title: "انتقاء الجودة", desc: "التركيز على جودة المنتج وطزاجته واتساقه." },
         { n: "٠٣", title: "التجهيز", desc: "تجهيز وتداول احترافي وفق متطلبات المشتري." },
         { n: "٠٤", title: "التصدير", desc: "دعم عملية إيصال المنتجات إلى المشترين الدوليين." },
