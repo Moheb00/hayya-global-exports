@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import type { Session } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
+import { claimCatalogOwner } from "@/lib/admin.functions";
 
 /**
  * Tracks the signed-in session and whether that account owns the catalog.
