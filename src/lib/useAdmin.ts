@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import type { Session } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
+import { claimCatalogOwner } from "@/lib/admin.functions";
 
 /**
  * Tracks the signed-in session and whether that account owns the catalog.
@@ -22,9 +23,14 @@ export function useAdmin() {
         setLoading(false);
         return;
       }
-      const { data, error } = await supabase.rpc("claim_first_admin");
-      if (!active) return;
-      setIsAdmin(!error && data === true);
+      try {
+        const result = await claimCatalogOwner();
+        if (!active) return;
+        setIsAdmin(result.isAdmin === true);
+      } catch {
+        if (!active) return;
+        setIsAdmin(false);
+      }
       setLoading(false);
     };
 
