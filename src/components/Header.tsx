@@ -55,7 +55,7 @@ export function Header() {
             alt="HAYYA"
             width={1152}
             height={576}
-            className={cn("w-auto transition-all duration-300", scrolled ? "h-8" : "h-10 md:h-11")}
+            className={cn("w-auto transition-all duration-300", scrolled ? "h-10" : "h-12 md:h-14")}
           />
         </a>
 
